@@ -19,3 +19,7 @@ docker run -d \
   -v /path/to/storage/:/storage:rw \
   rix1337/docker-gphotos-sync
   ```
+
+# Syncing
+
+`docker exec -it GooglePhotosSync gphotos-sync /storage`
