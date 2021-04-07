@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+    docker-gphotos-sync:
+        container_name: GooglePhotosSync
+        volumes:
+            - '/path/to/config/:/config:rw'
+            - '/path/to/storage/:/storage:rw'
+        image: rix1337/docker-gphotos-sync
