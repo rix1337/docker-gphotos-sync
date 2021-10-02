@@ -10,6 +10,7 @@ RUN mkdir /storage
 VOLUME /storage
 
 # dependencies
+RUN apk add --no-cache ffmpeg
 RUN pip install gphotos-sync
 
 # add local files
