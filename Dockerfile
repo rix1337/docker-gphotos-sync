@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.python3
+FROM ghcr.io/linuxserver/baseimage-alpine:3.15
 MAINTAINER rix1337
 
 # volumes
@@ -10,8 +10,8 @@ RUN mkdir /storage
 VOLUME /storage
 
 # dependencies
-RUN apk add --no-cache ffmpeg
-RUN pip install gphotos-sync
+RUN apk add --no-cache ffmpeg python3-dev py3-pip
+RUN pip3 install gphotos-sync
 
 # add local files
 COPY root/ /
