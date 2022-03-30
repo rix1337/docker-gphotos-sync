@@ -10,8 +10,12 @@ RUN mkdir /storage
 VOLUME /storage
 
 # dependencies
-RUN apk add --no-cache ffmpeg gcc python3-dev py3-pip
-RUN pip3 install gphotos-sync
+RUN apk add --no-cache build-base ffmpeg python3-dev py3-pip
+RUN pip3 install --upgrade pip \
+  && pip3 install gphotos-sync
 
 # add local files
 COPY root/ /
+
+# remove build tools
+RUN apk del build-base
