@@ -10,7 +10,7 @@ RUN mkdir /storage
 VOLUME /storage
 
 # dependencies
-RUN apk add --no-cache build-base ffmpeg python3-dev py3-pip
+RUN apk add --no-cache ffmpeg python3-dev py3-pip build-base linux-headers
 RUN pip3 install --upgrade pip \
   && pip3 install gphotos-sync
 
@@ -18,4 +18,4 @@ RUN pip3 install --upgrade pip \
 COPY root/ /
 
 # remove build tools
-RUN apk del build-base
+RUN apk del build-base linux-headers
