@@ -4,6 +4,9 @@
 It will backup all the photos the user uploaded to Google Photos, but also
 the album information and additional Google Photos ‘Creations’ (animations, panoramas, movies, effects and collages).
 
+# Support
+Open an issue [here](https://github.com/gilesknap/gphotos-sync/issues/new).
+
 # Start
 
 ```
